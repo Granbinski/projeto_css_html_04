@@ -1,68 +1,223 @@
-:root{
-  --primary-color: #04D976;
+/* Variáveis de Cores */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --light-color: #ecf0f1;
+  --dark-color: #34495e;
+  --font-family: 'Inter', sans-serif;
 }
 
-nav a{
-  color: inherit;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-  font: 400 62.5% "Inter", sans-serif;
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  color: var(--dark-color);
 }
 
-p, a{
-  font-size: 1.6rem;
+.wrapperContainer-dark,
+.wrapperContainer-dark2 {
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  padding: 20px 0;
 }
 
-.wrapperContainer-dark{
-  background-color: #262626;
-  color: #04D976;
+.wrapperContainer-light {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  padding: 20px 0;
 }
 
-.wrapperContainer-light{
-  background-color: #04D976;
-  color: #262626;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.wrapperContainer-dark2{
-  background-color: #03A61C;
-  color: #262626;
-}
-
-.container{
-  max-width: 120rem;
-  margin: auto;
-}
-
-.header{
+/* Cabeçalho */
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--primary-color);
+  padding: 20px 0;
 }
 
-.header_nav a{
-  padding: 1em;
-  border: solid 1px;
-  text-decoration: none;
-  border-radius: 1em;
-}
-
-.header_nav ul{
+.header_nav ul {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   list-style-type: none;
 }
 
-.header_nav a:hover{
-  background-color: var(--primary-color);
-  color: #262626;
+.header_nav a {
+  text-decoration: none;
+  color: var(--light-color);
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
+.header_nav a:hover {
+  background-color: var(--light-color);
+  color: var(--secondary-color);
+}
 
-.heroBanner{
+/* Banner Hero */
+.heroBanner {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding: 40px 0;
+}
 
+.header_content {
+  flex: 1 1 500px;
+  padding: 20px;
+}
+
+.header_content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.header_content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+/* Cursos */
+.cursos {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.cursosContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.curso_card {
+  background-color: var(--light-color);
+  border: 1px solid var(--dark-color);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s;
+}
+
+.curso_card:hover {
+  transform: translateY(-10px);
+}
+
+.curso_card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.curso_card_content {
+  padding: 20px;
+}
+
+.curso_card_content h3 {
+  margin-bottom: 10px;
+}
+
+.curso_card_content p {
+  font-size: 0.9rem;
+  color: var(--dark-color);
+}
+
+/* Nossa Escola */
+#escola {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 40px 0;
+}
+
+#escola img {
+  flex: 1 1 500px;
+  max-width: 100%;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+#escola h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#escola p {
+  font-size: 1rem;
+  max-width: 600px;
+}
+
+/* Contatos */
+#contatos {
+  text-align: center;
+  padding: 40px 0;
+}
+
+#contatos iframe {
+  max-width: 100%;
+  height: 450px;
+  border: 0;
+  border-radius: 8px;
+}
+
+#contatos address {
+  margin-top: 20px;
+  font-style: normal;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .heroBanner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #escola {
+    flex-direction: column;
+  }
+
+  #escola img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .header_nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
