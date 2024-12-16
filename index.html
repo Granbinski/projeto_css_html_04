@@ -4,7 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
   <title>Let's learn?</title>
 </head>
 
@@ -16,19 +22,21 @@
       <nav class="header_nav">
 
         <ul>
-          <li><a href="#cursos"></a>Cursos</li>
-          <li><a href="#escola"></a>Nossa Escola</li>
-          <li><a href="#contatos"></a>Contatos</li>
+          <li><a href="#cursos">Cursos</a></li>
+          <li><a href="#escola">Nossa Escola</a></li>
+          <li><a href="#contatos">Contatos</a></li>
         </ul>
 
       </nav>
 
       <div class="wrapperContainer-hero">
-        <section>
-          <h1>Let's learn?</h1>
-          <p>Seja bem-vindo a nossa escola de programação</p>
-          <a href="#cursos" class="btn">Conheça nossos cursos</a>
-          <img src="image/hackernoon-t2fKRcKF3fw-unsplash.jpg" alt="">
+        <section class="container heroBanner">
+          <div class="header_content">
+            <h1>Let's learn?</h1>
+            <p>Seja bem-vindo a nossa escola de programação</p>
+            <a href="#cursos" class="btn">Conheça nossos cursos</a>
+          </div>
+          <img width="1200px" src="image/hackernoon-t2fKRcKF3fw-unsplash.jpg" alt="">
         </section>
       </div>
     </header>
@@ -44,11 +52,45 @@
               <p>Curso de linux para iniciantes, aprenda o que voce precisa para iniciar no linux e seus primeiro
                 comandos</p>
             </div>
-            <a href="#" class="btn">Saiba mais</a>
           </article>
-
         </div>
+        <a href="#" class="btn">Saiba mais</a>
+      </section>
     </div>
+
+    <div class="wrapperContainer-dark2">
+
+      <section class="container" id="escola">
+        <img src="image/ariel-Oal07Ai4oTk-unsplash.jpg" alt="">
+        <h2>Habilidades de pentest</h2>
+        <p>Com material aprofundado de pentest para iniciantes, aprenda o que voce precisa para iniciar no pentest e
+          seus primeiro
+          comandos</p>
+      </section>
+    </div>
+
+    <div class="wrapperContainer-light">
+      <section class="container" id="contatos">
+        <h2>Contatos</h2>
+        <iframe width="100%" height="525" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.013292292073!2d-46.63507368502157!3d-23.54894368467968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5b8b1b7b7b7b%3A0x3b3b3b3b3b3b3b3b!2sAv.%20Fantasia%2C%201234%20-%20Cidade%20Maravilhosa%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2000000-000!5e0!3m2!1spt-BR!2sbr!4v1606820000000!5m2!1spt-BR!2sbr"
+          width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+          tabindex="0">
+        </iframe>
+        <address>Av. Fantasia, 1234 <br>
+          Bairro: Cidade Maravilhosa <br>
+          CEP: 12345-678 <br>
+          Telefone: (11) 1234-5678 <br>
+        </address>
+      </section>
+    </div>
+
+    <div class="wrapperContainer-dark">
+      <footer class="container">
+        <p>Let's learn? &copy; 2024</p>
+      </footer>
+    </div>
+  </div>
 </body>
 
 </html>
